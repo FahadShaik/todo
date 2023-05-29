@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My simple todo list</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="todo-container">
+        <div class="todo-box">
+            <h3>my todo list</h3>
+            <div class="row">
+                <input name="to-do-input" id="input-box" placeholder="Enter something">
+                <button onclick="addTask()"> Enter </button>
+            </div>
+            <ul id="todo-list-container">
+                <!-- <li class="checked">item</li>
+                <li>item</li>
+                <li>item</li> -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("todo-list-container");
+
+function addTask() {
+    if(inputBox.value === ''){
+        alert("write anything");
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML= "\u00d7";
+        li.appendChild(span);
+    }
+    inputBox.value = '';
+}
+listContainer.addEventListener("click" , function(e){
+ if(e.target.tagName === "LI"){
+    e.target.classList.toggle("checked");
+ }
+ else if(e.target.tagName === "SPAN"){
+    e.target.parentElement.remove();
+ }
+}, false)
+
+
+</script>
