@@ -9,15 +9,17 @@
   <body>
     <h1>My todo list</h1>
     <div class="container">
-      <div class="todo-searchbox">
-        <input
-          type="text"
-          spellcheck="false"
-          placholder="enter plan for the day"
-          class="todo-input"
-        />
-        <button class="todo-submit">Submit</button>
-      </div>
+      <form onsubmit="createItem(event)">
+        <div class="todo-searchbox">
+          <input
+            type="text"
+            spellcheck="false"
+            placholder="enter plan for the day"
+            class="todo-input"
+          />
+          <button class="todo-submit">Submit</button>
+        </div>
+      </form>
       <div class="todo-listbox">
         <ul>
           <li>First item <button>Done</button> <button>Delete</button></li>
@@ -28,4 +30,5 @@
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
