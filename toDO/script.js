@@ -1,4 +1,15 @@
+const myForm = document.querySelector(".todo-form");
+
 function createItem(e) {
   e.preventDefault();
-  //   console.log("hello");
+  const todoInput = document.querySelector(".todo-input");
+  const todoValue = todoInput.value;
+  const todolist = document.querySelector(".todo-list");
+  const listItem = document.createElement("li");
+
+  listItem.innerHTML = todoValue;
+
+  todoInput.value = "";
+
+  todolist.appendChild(listItem);
 }
