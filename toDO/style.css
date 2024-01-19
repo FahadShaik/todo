@@ -1,3 +1,32 @@
 * {
     margin: 0;
 }
+
+.add-btn,
+.delete-btn {
+    padding: 5px;
+    margin-top: 12px;
+    margin-right: 2px;
+    margin-left: 12px;
+}
+
+.add-btn {
+    background: #085213e9;
+    color: white;
+    padding: 4px 16px;
+
+}
+
+.delete-btn {
+    background: #f20f0f;
+    padding: 4px 16px;
+    color: white;
+}
+
+.remove-items {
+    display: none;
+}
+
+.strike-through {
+    text-decoration: line-through;
+}
