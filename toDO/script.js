@@ -11,5 +11,7 @@ function createItem(e) {
 
   todoInput.value = "";
 
-  todolist.appendChild(listItem);
+  if (todoValue !== "") {
+    todolist.appendChild(listItem);
+  }
 }
